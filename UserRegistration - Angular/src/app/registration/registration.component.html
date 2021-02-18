@@ -1,0 +1,54 @@
+<div class="row">
+    <img src="assets/BidOne.png" style="height: 60px;">
+</div>
+<br/>
+<div class="row">
+   
+  <div class="col-lg-4 col-md-6 offset-lg-4 offset-md-3 col-border"> 
+    <h3> User Registration Form</h3>
+    <form [formGroup]="registrationForm" (ngSubmit)="onSubmit()">
+
+    <div class="form-group required">
+        <label>First Name</label>
+        <input type="text" class="form-control" formControlName="firstName" />
+       
+        <div *ngIf="firstName.touched && firstName.invalid" class="alert alert-danger">
+            <div *ngIf="firstName.errors.required">First Name is required</div>
+            <div *ngIf="!firstName.errors.required && firstName.errors.pattern">Enter a valid First Name</div>
+        </div>
+    </div>
+
+    <div class="form-group required">
+        <label>Last Name</label>
+        <input type="text" class="form-control" formControlName="lastName" />
+        <div *ngIf="lastName.touched && lastName.invalid" class="alert alert-danger">
+            <div *ngIf="lastName.errors.required">Last Name is required</div>
+            <div *ngIf="!lastName.errors.required && lastName.errors.pattern">Enter a valid Last Name</div>
+        </div>
+    </div>
+
+    <div class="form-group required">
+        <label>DOB</label>
+        <input type="date" class="form-control" formControlName="dob"  />
+        <div *ngIf="dob.touched && dob.invalid" class="alert alert-danger">
+            <div *ngIf="dob.errors.required">Date Of Birth is required</div>
+            <div *ngIf="dob.errors.cannotBeAfterCurrentDate">Invalid Date Of Birth</div>
+        </div>
+    </div>
+
+    <div class="form-group required">
+        <label>Email</label>
+        <input type="text" class="form-control" formControlName="email" />
+        <div *ngIf="email.touched && email.invalid" class="alert alert-danger">
+            <div *ngIf="email.errors.required">Email is required</div>
+            <div *ngIf="email.errors.email">Email must be a valid email address</div>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <button type="submit" class="btn btn-primary" [disabled]="!registrationForm.valid">Submit</button>
+    </div>
+
+</form>
+</div> 
+</div>
