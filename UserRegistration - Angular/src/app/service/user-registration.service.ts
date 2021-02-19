@@ -8,8 +8,9 @@ import {HttpClient} from '@angular/common/http';
 export class UserRegistrationService {
 
   constructor(private http:HttpClient) { }
+  
+  //Calling WebAPI post method along with the user details for registration
   register(userDetails:UserDetails){
-    console.log("inside register");
     var body = 
     {    
     FirstName: userDetails.firstName,
@@ -17,7 +18,6 @@ export class UserRegistrationService {
     DateOfBirth: userDetails.dob,
     Email: userDetails.email
   };
-  console.log("inside register2322"+ body);
   return this.http.post('https://localhost:44399/api/registration/submit',body, {responseType: 'text'});
 }
 }
