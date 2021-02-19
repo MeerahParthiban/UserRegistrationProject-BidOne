@@ -11,6 +11,7 @@ import { UserRegistrationSuccessComponent } from './user-registration-success/us
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {ToastrModule} from 'ngx-toastr';
 
+//Application is made responsive on Laptop, iPad and Mobile view using Bootstrap
 @NgModule({
   declarations: [
     AppComponent,
