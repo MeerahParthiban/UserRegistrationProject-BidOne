@@ -39,14 +39,17 @@ export class RegistrationComponent implements OnInit {
    userDetails.lastName = this.registrationForm.get('lastName').value;
    userDetails.dob = this.registrationForm.get('dob').value;
    userDetails.email = this.registrationForm.get('email').value;
+   
+   /**Calling the service method to register the valid user.
+   Upon successful registration , redirected to confirmation page. 
+   Incase of Failure, Toaster Error message is displayed. **/
    this.userRegistrationService.register(userDetails).subscribe(
      (response:any)=>{
-       console.log("Res"+ response);
-       this.router.navigate(['app-user-registration-success']);
+      if(response=="Success") 
+      this.router.navigate(['app-user-registration-success']);
      },
      (err:HttpErrorResponse)=>{
-       this.toastr.error('Unexpected Error');
-       console.log("error"+err.message);
+       this.toastr.error('Unexpected Error occurred during User registration');
      }
    )
      
