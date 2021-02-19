@@ -19,6 +19,7 @@ namespace UserRegistrationAPI.Controllers
         
         [HttpPost]
         [Route("submit")]
+        //Post Method to get user details from Angular and creates Json file with the user data
         public async Task<IActionResult> Post( [FromBody] User user)
 
         {
