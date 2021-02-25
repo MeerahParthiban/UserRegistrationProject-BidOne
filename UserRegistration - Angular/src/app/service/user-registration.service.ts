@@ -18,6 +18,6 @@ export class UserRegistrationService {
     DateOfBirth: userDetails.dob,
     Email: userDetails.email
   };
-  return this.http.post('https://localhost:44399/api/registration/submit',body, {responseType: 'text'});
+  return this.http.post('https://bidoneuserregistrationapi.azurewebsites.net/api/registration/submit',body, {responseType: 'text'});
 }
 }

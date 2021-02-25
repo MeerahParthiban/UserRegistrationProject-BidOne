@@ -31,7 +31,7 @@ import {ToastrModule} from 'ngx-toastr';
       {path:'**',component: RegistrationComponent}
     ])
   ],
-  providers: [],
+   providers: [UserRegistrationService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
