@@ -1,6 +1,6 @@
 **USER REGISTRATION PROJECT**
 
-Developed Front-End using Angular 9 framework and backend using .Net Core WebAPI.
+Developed Front-End using Angular 9 framework and backend using ASP.Net Core WebAPI.
 
 **APPLICATION PROCESS**
 
@@ -12,3 +12,15 @@ If some error occurs in registering the user, a Toaster message will be displaye
 **COMPATIBLE WITH ALL DEVICES**
 
 Application is made responsive in all devices like Mobile devices,Ipad,Laptop using Bootstrap.
+
+**HOSTING APPLICATION IN CLOUD**
+
+I have deployed both Angular and WebAPI in Microsoft Azure. The link for the application is https://angularuserregistration.z13.web.core.windows.net/
+
+<img src="https://github.com/MeerahParthiban/UserRegistrationProject-BidOne/blob/master/UserRegistrationApp.png">
+
+**TESTING APPLICATION**
+
+I have written Integration test cases for certain scenarios and please find the code coverage for the testcases below.
+
+<img src="https://github.com/MeerahParthiban/UserRegistrationProject-BidOne/blob/master/Code%20Coverage%20of%20Test%20Cases.png">
